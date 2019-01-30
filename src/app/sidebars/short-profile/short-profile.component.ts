@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import gravatarHelper from '../../../helpers/gravatar';
-import {UserService} from '../../../services/user.service';
-import {User} from '../../../interfaces';
+import {User} from '@interfaces';
+import {UserService} from '@services';
 
 @Component({
   selector: 'app-short-profile',
@@ -10,7 +9,6 @@ import {User} from '../../../interfaces';
 })
 export class ShortProfileComponent implements OnInit {
   private user: User;
-  public getAvatar: (email: string) => string = gravatarHelper.getAvatar;
 
   constructor(private userService: UserService) {}
 

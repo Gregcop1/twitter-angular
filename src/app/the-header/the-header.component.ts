@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {TweetsService} from '../../services/tweets.service';
+import {TweetsService} from '@services';
 
 @Component({
   selector: 'app-the-header',

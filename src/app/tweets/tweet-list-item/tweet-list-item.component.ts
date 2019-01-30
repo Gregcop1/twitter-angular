@@ -1,7 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Tweet} from '../../../interfaces';
-import dateHelper from '../../../helpers/date';
-import gravatarHelper from '../../../helpers/gravatar';
+import {Tweet} from '@interfaces';
 
 @Component({
   selector: 'app-tweet-list-item',
@@ -10,7 +8,4 @@ import gravatarHelper from '../../../helpers/gravatar';
 })
 export class TweetListItemComponent {
   @Input() tweet: Tweet;
-
-  public fromNow: (timestamp: number) => string = dateHelper.fromNow;
-  public getAvatar: (email: string) => string = gravatarHelper.getAvatar;
 }

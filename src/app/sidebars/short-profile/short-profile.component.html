@@ -1,6 +1,6 @@
 <div class="block short-profile">
   <div class="profile-infos">
-    <img [src]="getAvatar(user.email)" [alt]="user.name" class="avatar"/>
+    <img [src]="user.email|gravatar" [alt]="user.name" class="avatar"/>
     <p class="profile-metas">
       {{user.name}}
       <span class="profile-account">{{user.account}}</span>

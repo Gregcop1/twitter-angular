@@ -12,7 +12,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
   styleUrls: ['./writer-container.component.scss']
 })
 export class WriterContainerComponent {
-  private fold = false;
+  private fold = true;
 
   toggleFold() {
     this.fold = !this.fold;

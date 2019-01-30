@@ -1,13 +1,12 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {User} from '../../../interfaces';
-import gravatarHelper from '../../../helpers/gravatar';
-import {UserService} from '../../../services/user.service';
+import {User} from '@interfaces';
+import {UserService} from '@services';
 
 @Component({
   selector: 'app-simple-writer',
   template: `
     <div class="writer-block--fold">
-      <img [src]="getAvatar(user.email)" [alt]="user.name" class="avatar" />
+      <img [src]="user.email|gravatar" [alt]="user.name" class="avatar" />
       <input type="text" placeholder="Ecrivez votre texte ici..." (focus)="focus($event)"/>
       <i class="fa fa-picture-o"></i>
     </div>
@@ -16,7 +15,6 @@ import {UserService} from '../../../services/user.service';
 export class SimpleWriterComponent implements OnInit {
   @Output() onFocus: EventEmitter<null> = new EventEmitter(false);
   private user: User;
-  public getAvatar: (email: string) => string = gravatarHelper.getAvatar;
 
   constructor(private userService: UserService) {}
 

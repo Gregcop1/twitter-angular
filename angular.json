@@ -27,8 +27,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/stylesheets/index.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/stylesheets"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -83,7 +88,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.scss"
+              "src/stylesheets/index.scss"
             ],
             "scripts": [],
             "assets": [

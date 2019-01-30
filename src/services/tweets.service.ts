@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Observable} from 'rxjs';
-import tweetsHelper from '../helpers/tweets';
-import {Tweet} from '../interfaces';
+import {BehaviorSubject} from 'rxjs';
+import {tweetsHelper} from '@helpers';
+import {Tweet} from '@interfaces';
 
 @Injectable({
   providedIn: 'root'

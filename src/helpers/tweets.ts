@@ -1,6 +1,6 @@
-import {Tweet} from '../interfaces';
+import {Tweet} from '@interfaces';
 
-const tweetsHelper = {
+export const tweetsHelper = {
   generateTweet: (index: number): Tweet => {
     // tslint:disable
     const authors = [
@@ -65,5 +65,3 @@ const tweetsHelper = {
     });
   },
 };
-
-export default tweetsHelper;

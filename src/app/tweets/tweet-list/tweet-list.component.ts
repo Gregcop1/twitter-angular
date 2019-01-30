@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Tweet} from '../../../interfaces';
+import {Tweet} from '@interfaces';
 
 @Component({
   selector: 'app-tweet-list',

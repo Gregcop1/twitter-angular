@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {TweetsService} from '../../services/tweets.service';
-import {Tweet} from '../../interfaces';
+import {Tweet} from '@interfaces';
+import {TweetsService} from '@services';
 
 @Component({
   selector: 'app-home-page',

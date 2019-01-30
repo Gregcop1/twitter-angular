@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Share} from '../../../interfaces';
+import {Share} from '@interfaces';
 
 @Component({
   selector: 'app-tweet-list-action-bar',

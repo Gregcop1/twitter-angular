@@ -1,6 +1,6 @@
 import * as moment from 'moment';
 
-const dateHelper = {
+export const dateHelper = {
   fromNow: (thenTimestamp: number): string => {
     const now = moment();
     const then = moment(thenTimestamp);
@@ -17,5 +17,3 @@ const dateHelper = {
     return diff.seconds ? `${diff.seconds} s` : 'à l\'instant';
   },
 };
-
-export default dateHelper;
