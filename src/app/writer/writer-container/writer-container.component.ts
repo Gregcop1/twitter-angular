@@ -5,8 +5,10 @@ import {Component, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None,
   template: `
     <div class="block writer-block">
-      <app-simple-writer *ngIf="fold" (onFocus)="toggleFold()"></app-simple-writer>
-      <app-full-writer *ngIf="!fold" (onBlur)="toggleFold()"></app-full-writer>
+      <app-simple-writer *ngIf="fold; else unfold" (onFocus)="toggleFold(false)"></app-simple-writer>
+      <ng-template #unfold>
+        <app-full-writer (onBlur)="toggleFold(true)"></app-full-writer>
+      </ng-template>
     </div>
   `,
   styleUrls: ['./writer-container.component.scss']
@@ -14,7 +16,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
 export class WriterContainerComponent {
   private fold = true;
 
-  toggleFold() {
-    this.fold = !this.fold;
+  toggleFold(value: boolean) {
+    this.fold = value;
   }
 }
