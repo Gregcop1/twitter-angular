@@ -1,7 +1,13 @@
 <header class="main-header">
   <div class="container">
     <p class="logo">
-      <i class="fa fa-fw fa-spinner fa-pulse"></i>
+      <i
+        class="fa fa-fw"
+        [ngClass]="{
+          'fa-spinner fa-pulse': pending,
+          'fa-twitter': !pending
+        }"
+      ></i>
     </p>
   </div>
 </header>

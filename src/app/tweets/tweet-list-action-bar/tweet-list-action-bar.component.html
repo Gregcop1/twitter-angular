@@ -1,0 +1,15 @@
+<p class="list-item-actions">
+  <button
+    class="fa fa-comment-o fa-fw answer"
+    [ngClass]="{active: !!shares.answer}"
+  >{{shares.answer}}</button>
+  <button
+    class="fa fa-retweet fa-fw retweet"
+    [ngClass]="{active: !!shares.retweet}"
+  >{{shares.retweet}}</button>
+  <button
+    class="fa fa-fw like"
+    [ngClass]="{'active fa-heart fa-heart-o': !!shares.like}"
+  >{{shares.like}}</button>
+  <button class="fa fa-envelope-o fa-fw pm"></button>
+</p>

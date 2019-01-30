@@ -16,6 +16,10 @@ import { FullWriterComponent } from './writer/full-writer/full-writer.component'
 import {FormsModule} from '@angular/forms';
 import {UserService} from '../services/user.service';
 import { ActionBarWriterComponent } from './writer/action-bar-writer/action-bar-writer.component';
+import { TweetListComponent } from './tweets/tweet-list/tweet-list.component';
+import {TweetsService} from '../services/tweets.service';
+import { TweetListItemComponent } from './tweets/tweet-list-item/tweet-list-item.component';
+import { TweetListActionBarComponent } from './tweets/tweet-list-action-bar/tweet-list-action-bar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { ActionBarWriterComponent } from './writer/action-bar-writer/action-bar-
     WriterContainerComponent,
     SimpleWriterComponent,
     FullWriterComponent,
-    ActionBarWriterComponent
+    ActionBarWriterComponent,
+    TweetListComponent,
+    TweetListItemComponent,
+    TweetListActionBarComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +45,7 @@ import { ActionBarWriterComponent } from './writer/action-bar-writer/action-bar-
     FormsModule,
   ],
   providers: [
+    TweetsService,
     UserService,
   ],
   bootstrap: [AppComponent]

@@ -1,0 +1,13 @@
+<div  class="block list-item">
+  <img [src]="getAvatar(tweet.author.email)" [alt]="tweet.author.name" class="avatar" />
+  <div class="list-item-content">
+    <p class="list-item-meta">
+      <span class="list-item-name">{{tweet.author.name}}</span>
+      <span class="list-item-account">{{tweet.author.account}}</span>
+      <span class="list-item-date">{{fromNow(tweet.date)}}</span>
+    </p>
+    <p class="list-item-message">{{tweet.message}}</p>
+    <img *ngIf="tweet.image" [src]="tweet.image" class="list-item-image" alt=""/>
+    <app-tweet-list-action-bar [shares]="tweet.shares"></app-tweet-list-action-bar>
+  </div>
+</div>
