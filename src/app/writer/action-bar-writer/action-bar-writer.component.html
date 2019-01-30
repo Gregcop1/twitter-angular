@@ -1,0 +1,23 @@
+<p class="writer-actions">
+    <span class="writer-actions-controls-block">
+        <i class="fa fa-picture-o fa-border fa-fw"></i>
+        <i class="fa fa-th-list fa-border fa-fw"></i>
+        <i class="fa fa-map-marker fa-border fa-fw"></i>
+    </span>
+  <span class="writer-actions-submit-block">
+      <span
+        class="writer-actions-counter"
+        [ngClass]="{
+          'writer-actions-counter--danger': isNearTheEnd,
+          'writer-actions-counter--alert': isBelowEnd
+        }"
+      >{{ remaining }}</span>
+      <button
+        type="submit"
+        class="writer-actions-submit"
+        [ngClass]="{
+          'writer-actions-submit--disabled': !isTweetable
+        }"
+      >Tweeter</button>
+    </span>
+</p>

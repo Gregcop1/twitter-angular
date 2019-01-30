@@ -11,6 +11,11 @@ import { TrendListComponent } from './sidebars/trend-list/trend-list.component';
 import { SuggestionListComponent } from './sidebars/suggestion-list/suggestion-list.component';
 import { RightSidebarComponent } from './sidebars/right-sidebar/right-sidebar.component';
 import { WriterContainerComponent } from './writer/writer-container/writer-container.component';
+import { SimpleWriterComponent } from './writer/simple-writer/simple-writer.component';
+import { FullWriterComponent } from './writer/full-writer/full-writer.component';
+import {FormsModule} from '@angular/forms';
+import {UserService} from '../services/user.service';
+import { ActionBarWriterComponent } from './writer/action-bar-writer/action-bar-writer.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +27,19 @@ import { WriterContainerComponent } from './writer/writer-container/writer-conta
     TrendListComponent,
     SuggestionListComponent,
     RightSidebarComponent,
-    WriterContainerComponent
+    WriterContainerComponent,
+    SimpleWriterComponent,
+    FullWriterComponent,
+    ActionBarWriterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    UserService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <div class="home">
       <app-left-sidebar></app-left-sidebar>
       <div class="column main-content">
-        <!--<WriterContainer></WriterContainer>-->
+        <app-writer-container></app-writer-container>
         <!--<List :tweets="tweets"></List>-->
       </div>
       <app-right-sidebar></app-right-sidebar>

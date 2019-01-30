@@ -1,20 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-writer-container',
+  encapsulation: ViewEncapsulation.None,
   template: `
     <div class="block writer-block">
-      <!--<SimpleWriter v-if="!writing" @onFocus="toggleWriting()" />-->
-      <!--<FullWriter v-else @onBlur="toggleWriting()"/>-->
+      <app-simple-writer *ngIf="fold" (onFocus)="toggleFold()"></app-simple-writer>
+      <app-full-writer *ngIf="!fold" (onBlur)="toggleFold()"></app-full-writer>
     </div>
   `,
   styleUrls: ['./writer-container.component.scss']
 })
-export class WriterContainerComponent implements OnInit {
+export class WriterContainerComponent {
+  private fold = false;
 
-  constructor() { }
-
-  ngOnInit() {
+  toggleFold() {
+    this.fold = !this.fold;
   }
-
 }
