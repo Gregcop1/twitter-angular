@@ -1,0 +1,16 @@
+@import "../../../stylesheets/settings/all";
+
+.trend-list {
+  h3, ul{ margin: 0; padding: 0; }
+  h3 {
+    margin-bottom: 2*$page-padding;
+    font-size: 1.8em;
+  }
+  li {
+    margin: .5 *$page-padding; list-style-type: none;
+    font-weight: $fw-semibold;
+
+    button { color: $dark-blue; }
+    button:hover { color: $blue; }
+  }
+}

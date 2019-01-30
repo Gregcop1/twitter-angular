@@ -1,0 +1,14 @@
+@import "../../stylesheets/settings/all";
+
+.main-header {
+  background-color: $white; box-shadow: 0 2px 3px $grey;
+  text-align: center;
+
+  .container { position: relative; }
+  .logo {
+    display: inline-block; margin: 10px 0;
+    color: $blue;
+
+    .fa { font-size: 1.5em; }
+  }
+}
