@@ -7,7 +7,7 @@ import {TweetsService} from '@services';
   styleUrls: ['./the-header.component.scss']
 })
 export class TheHeaderComponent implements OnInit {
-  private pending = false;
+  public pending = false;
 
   constructor(private tweetsService: TweetsService) {}
 

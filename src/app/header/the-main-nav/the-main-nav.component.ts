@@ -7,7 +7,7 @@ import {NavLink} from '@interfaces';
   styleUrls: ['./the-main-nav.component.scss']
 })
 export class TheMainNavComponent {
-  private links: NavLink[] = [
+  public links: NavLink[] = [
     {icon: 'fa-home', label: 'Accueil', routePath: ''},
     {icon: 'fa-bell-o', label: 'Mes tweets', routePath: 'my-tweets'},
   ];

@@ -8,7 +8,7 @@ import {UserService} from '@services';
   styleUrls: ['./short-profile.component.scss']
 })
 export class ShortProfileComponent implements OnInit {
-  private user: User;
+  public user: User;
 
   constructor(private userService: UserService) {}
 

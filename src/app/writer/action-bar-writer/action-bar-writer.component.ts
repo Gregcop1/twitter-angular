@@ -9,19 +9,19 @@ export class ActionBarWriterComponent {
 
   @Input() length: number;
 
-  private get remaining() {
+  public get remaining() {
     return ActionBarWriterComponent.MAX_LENGTH - this.length;
   }
 
-  private get isBelowEnd() {
+  public get isBelowEnd() {
     return 0 > this.remaining;
   }
 
-  private get isNearTheEnd() {
+  public get isNearTheEnd() {
     return !this.isBelowEnd && 20 >= this.remaining;
   }
 
-  private get isTweetable() {
+  public get isTweetable() {
     return !this.isBelowEnd && ActionBarWriterComponent.MAX_LENGTH !== this.remaining;
   }
 }

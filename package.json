@@ -1,13 +1,16 @@
 {
   "name": "twitter-angular",
   "version": "0.0.0",
+  "homepage": "https://gregcop1.github.io/twitter-angular",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "predeploy": "ng build --prod --base-href /twitter-angular/",
+    "deploy": "gh-pages -d dist/twitter-angular"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +25,7 @@
     "@types/md5": "^2.1.33",
     "@types/moment": "^2.13.0",
     "core-js": "^2.5.4",
+    "gh-pages": "^2.0.1",
     "md5": "^2.2.1",
     "moment": "^2.24.0",
     "rxjs": "~6.3.3",

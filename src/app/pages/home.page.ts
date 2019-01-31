@@ -16,7 +16,7 @@ import {TweetsService} from '@services';
   `,
 })
 export class HomePageComponent implements OnInit {
-  private tweets: Tweet[] = [];
+  public tweets: Tweet[] = [];
 
   constructor(private tweetsService: TweetsService) {}
 

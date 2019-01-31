@@ -14,7 +14,7 @@ import {UserService} from '@services';
 })
 export class SimpleWriterComponent implements OnInit {
   @Output() onFocus: EventEmitter<null> = new EventEmitter(false);
-  private user: User;
+  public user: User;
 
   constructor(private userService: UserService) {}
 

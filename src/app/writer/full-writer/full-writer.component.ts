@@ -23,7 +23,7 @@ import {TweetsService} from '@services';
 export class FullWriterComponent implements OnInit {
   @ViewChild('field') field: ElementRef;
   @Output() onBlur: EventEmitter<null> = new EventEmitter(false);
-  private value = '';
+  public value = '';
 
   constructor(private tweetsService: TweetsService) {}
 
