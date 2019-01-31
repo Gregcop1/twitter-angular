@@ -1,0 +1,14 @@
+<nav class="main-nav">
+  <ul>
+    <li *ngFor="let link of links">
+      <a
+        [routerLink]="link.routePath"
+        routerLinkActive="nav-item--active"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="nav-item"
+      >
+        <i class="fa" [ngClass]="link.icon"></i> {{link.label}}
+      </a>
+    </li>
+  </ul>
+</nav>

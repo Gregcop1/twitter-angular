@@ -6,7 +6,7 @@ import {TweetsService, UserService} from '@services';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {HomePageComponent} from './pages';
+import {HomePageComponent, MyTweetsPagePageComponent} from './pages';
 import {
   LeftSidebarComponent,
   RightSidebarComponent,
@@ -14,7 +14,7 @@ import {
   SuggestionListComponent,
   TrendListComponent
 } from './sidebars';
-import { TheHeaderComponent } from './the-header';
+import { TheHeaderComponent, TheMainNavComponent } from './header';
 import { TweetListComponent, TweetListActionBarComponent, TweetListItemComponent } from './tweets';
 import { ActionBarWriterComponent, FullWriterComponent, SimpleWriterComponent, WriterContainerComponent } from './writer';
 
@@ -27,6 +27,7 @@ import { ActionBarWriterComponent, FullWriterComponent, SimpleWriterComponent, W
     GravatarPipe,
     HomePageComponent,
     LeftSidebarComponent,
+    MyTweetsPagePageComponent,
     RightSidebarComponent,
     ShortProfileComponent,
     SimpleWriterComponent,
@@ -37,6 +38,7 @@ import { ActionBarWriterComponent, FullWriterComponent, SimpleWriterComponent, W
     TweetListItemComponent,
     TweetListActionBarComponent,
     WriterContainerComponent,
+    TheMainNavComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+@import "settings/all";
+
+.main-nav {
+  position: absolute; bottom: 0;
+
+  ul { display: inline; margin: 0; padding: 0; }
+  li {
+    display: inline-block; margin: 0;
+    font-size: 1.5em;
+  }
+  .nav-item {
+    display: inline-block; padding: 0 15px 8px; border-bottom: 2px solid transparent;
+    font-weight: $fw-semibold;
+    transition: border-color 200ms linear;
+
+    &:hover, &--active {
+      border-color: $blue;
+      text-decoration: none;
+    }
+    .fa { margin-right: 5px; }
+  }
+}

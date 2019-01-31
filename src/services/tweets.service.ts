@@ -10,10 +10,16 @@ import {UserService} from './user.service';
 export class TweetsService {
   private user: User;
   public tweets$: BehaviorSubject<Tweet[]> = new BehaviorSubject([]);
+  public ownTweets$: BehaviorSubject<Tweet[]> = new BehaviorSubject([]);
   public pending$: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   constructor(userService: UserService) {
     userService.user$.subscribe(user => this.user = user);
+    this.tweets$.subscribe((tweets: Tweet[]) => {
+      this.ownTweets$.next(
+        tweets.filter(tweet => this.user.account === tweet.author.account)
+      );
+    });
     this.fetch();
   }
 
